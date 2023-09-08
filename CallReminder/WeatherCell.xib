@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="indexCell" id="NJt-Gq-3fT" customClass="WeatherCell" customModule="CallReminder" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="97" height="138"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Zp9-w4-I16" customClass="WeatherCell">
+                <rect key="frame" x="0.0" y="0.0" width="97" height="138"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xew-rw-BIl">
+                        <rect key="frame" x="27" y="11" width="42" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zcw-p1-kDc">
+                        <rect key="frame" x="27" y="101" width="42" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="04d" translatesAutoresizingMaskIntoConstraints="NO" id="Fuc-rg-eJX">
+                        <rect key="frame" x="14" y="43" width="67" height="49"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="xew-rw-BIl" firstAttribute="leading" secondItem="Zp9-w4-I16" secondAttribute="leading" constant="27" id="Jfh-0T-yV4"/>
+                    <constraint firstAttribute="bottom" secondItem="Zcw-p1-kDc" secondAttribute="bottom" constant="13" id="LSb-6u-BAr"/>
+                    <constraint firstItem="Fuc-rg-eJX" firstAttribute="top" secondItem="xew-rw-BIl" secondAttribute="bottom" constant="8" symbolic="YES" id="Mwi-8S-ByI"/>
+                    <constraint firstAttribute="trailing" secondItem="Zcw-p1-kDc" secondAttribute="trailing" constant="28" id="Xtw-Wh-TiX"/>
+                    <constraint firstItem="Zcw-p1-kDc" firstAttribute="leading" secondItem="Zp9-w4-I16" secondAttribute="leading" constant="27" id="ZLJ-ms-NV5"/>
+                    <constraint firstAttribute="trailing" secondItem="xew-rw-BIl" secondAttribute="trailing" constant="28" id="fSz-Nb-jsK"/>
+                    <constraint firstAttribute="trailing" secondItem="Fuc-rg-eJX" secondAttribute="trailing" constant="16" id="kZ8-WU-arJ"/>
+                    <constraint firstItem="Fuc-rg-eJX" firstAttribute="leading" secondItem="Zp9-w4-I16" secondAttribute="leading" constant="14" id="lu4-Jo-XbU"/>
+                    <constraint firstItem="xew-rw-BIl" firstAttribute="top" secondItem="Zp9-w4-I16" secondAttribute="top" constant="11" id="uzs-h4-m2d"/>
+                    <constraint firstItem="Zcw-p1-kDc" firstAttribute="top" secondItem="Fuc-rg-eJX" secondAttribute="bottom" constant="9" id="vjX-9v-o43"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="97" height="138"/>
+            <connections>
+                <outlet property="iconView" destination="Fuc-rg-eJX" id="6pm-hH-wue"/>
+                <outlet property="labelHour" destination="xew-rw-BIl" id="pZ9-5A-KSr"/>
+                <outlet property="tempLabel" destination="Zcw-p1-kDc" id="Fsi-j6-Xb8"/>
+            </connections>
+            <point key="canvasLocation" x="-356.48854961832058" y="-275.35211267605638"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="04d" width="50" height="50"/>
+    </resources>
+</document>
